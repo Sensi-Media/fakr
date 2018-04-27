@@ -9,7 +9,10 @@
             "email": "marijn@sensimedia.nl"
         }
     ],
-    "require": {},
+    "require": {
+        "zendframework/zend-diactoros": "^1.7",
+        "monolyth/reroute": "^4.2"
+    },
     "autoload": {
         "psr-4": {
             "Sensi\\Fakr\\": "./src"
