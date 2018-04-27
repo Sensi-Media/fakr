@@ -6,8 +6,7 @@ CREATE TABLE fakr_inbox (
     sender VARCHAR(255) NOT NULL,
     recipient VARCHAR(255) NOT NULL,
     subject VARCHAR(255) NOT NULL,
-    txt TEXT,
-    html TEXT NOT NULL,
+    body TEXT NOT NULL,
     datecreated TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
 );
 
