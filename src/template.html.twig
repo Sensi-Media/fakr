@@ -1,0 +1,35 @@
+{% extends 'Dashboard/template.html.twig' %}
+
+{% block title %}Inbox{% endblock title %}
+
+{% block content %}
+    <article class="page main">
+        <h1>Inbox</h1>
+        <p>
+            Dit zijn dus nep-devmails, geen echte berichten ;)
+        </p>
+        {% if mails %}
+            <table class="mails">
+                <thead>
+                    <tr>
+                        <th>Van</th>
+                        <th>Aan</th>
+                        <th>Onderwerp</th>
+                        <th>Datum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for mail in mails %}
+                        <tr>
+                            <td><a href="{{ url('inbox-detail', {id: mail.id}) }}">{{ mail.sender }}</a></td>
+                            <td><a href="{{ url('inbox-detail', {id: mail.id}) }}">{{ mail.recipient }}</a></td>
+                            <td><a href="{{ url('inbox-detail', {id: mail.id}) }}">{{ mail.subject }}</a></td>
+                            <td><a href="{{ url('inbox-detail', {id: mail.id}) }}">{{ mail.datecreated | date('d/m/Y') }}</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </article>
+{% endblock content %}
+
