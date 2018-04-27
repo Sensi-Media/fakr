@@ -1,6 +1,6 @@
 <?php
 
-namespace Sesni\Fakr;
+namespace Sensi\Fakr;
 
 class View extends \View
 {
