@@ -18,13 +18,12 @@ class Mailer
     
     public function send(Swift_Mime_SimpleMessage $msg) : bool
     {
+        $sender = $this->normalize($msg->getFrom());
+        $recipient = $this->normalize($msg->getTo());
+        $subject = $msg->getSubject();
+        $body = "$msg";
         $this->sensiAdapter->insertInto('fakr_inbox')
-            ->execute([
-                'sender' => $msg->getFrom(),
-                'recipient' => $msg->getTo(),
-                'subject' => $msg->getSubject(),
-                'body' => "$msg",
-            ]);
+            ->execute(compact('sender', 'recipient', 'subject', 'body'));
         return true;
     }
 }
