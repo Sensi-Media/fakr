@@ -1,0 +1,13 @@
+{
+    "name": "sensi/fakr",
+    "description": "Mail faker for Sensi",
+    "type": "library",
+    "license": "none",
+    "authors": [
+        {
+            "name": "Marijn Ophorst",
+            "email": "marijn@sensimedia.nl"
+        }
+    ],
+    "require": {}
+}
