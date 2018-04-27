@@ -29,4 +29,7 @@ $container->register(function (&$sensiAdapter) {
         use Buildable;
     };
 });
+$container->register(function (&$mailer) {
+    $mailer = new Mailer;
+});
 
