@@ -14,7 +14,7 @@ use Toast\Cache\Pool;
 $container = new Container;
 $env = $container->get('env');
 
-if ($env->dev) {
+if ($env->dev && !$env->test) {
     $container->register(function (&$fakrRepository) {
         $fakrRepository = new Repository;
     });
