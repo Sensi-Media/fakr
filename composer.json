@@ -12,8 +12,8 @@
     "require": {
         "zendframework/zend-diactoros": "^1.7",
         "monolyth/reroute": "^4.2",
-        "quibble/postgresql": "^1.7",
-        "quibble/query": "^0.7.3",
+        "quibble/postgresql": "^2.0.0",
+        "quibble/query": "^1.0.0",
         "monolyth/envy": "^0.5.3"
     },
     "autoload": {
