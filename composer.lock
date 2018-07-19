@@ -1,11 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "29cbf337bd0ccd2f56b63112efac57a2",
-    "content-hash": "d7f68b3c45a315acffb5949be73b1f9a",
+    "content-hash": "465a559c88353a27bff48889b1e471e9",
     "packages": [
         {
             "name": "jakeasmith/http_build_url",
@@ -38,70 +37,7 @@
                 }
             ],
             "description": "Provides functionality for http_build_url() to environments without pecl_http.",
-            "time": "2017-05-01 15:36:40"
-        },
-        {
-            "name": "league/fractal",
-            "version": "0.14.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/fractal.git",
-                "reference": "56ad8933fbb40328ca3321c84143b2c16186eebf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/56ad8933fbb40328ca3321c84143b2c16186eebf",
-                "reference": "56ad8933fbb40328ca3321c84143b2c16186eebf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "illuminate/contracts": "~5.0",
-                "mockery/mockery": "~0.9",
-                "pagerfanta/pagerfanta": "~1.0.0",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5",
-                "zendframework/zend-paginator": "~2.3"
-            },
-            "suggest": {
-                "illuminate/pagination": "The Illuminate Pagination component.",
-                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
-                "zendframework/zend-paginator": "Zend Framework Paginator"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.13-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Fractal\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Phil Sturgeon",
-                    "email": "me@philsturgeon.uk",
-                    "homepage": "http://philsturgeon.uk/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Handle the output of complex data structures ready for API output.",
-            "homepage": "http://fractal.thephpleague.com/",
-            "keywords": [
-                "api",
-                "json",
-                "league",
-                "rest"
-            ],
-            "time": "2016-07-21 09:56:14"
+            "time": "2017-05-01T15:36:40+00:00"
         },
         {
             "name": "league/pipeline",
@@ -148,7 +84,7 @@
                 "pipeline",
                 "sequential"
             ],
-            "time": "2015-06-25 16:50:06"
+            "time": "2015-06-25T16:50:06+00:00"
         },
         {
             "name": "monolyth/envy",
@@ -187,20 +123,20 @@
                 }
             ],
             "description": "Flexible environment handler for PHP projects (including unit tests!)",
-            "time": "2017-04-11 06:52:16"
+            "time": "2017-04-11T06:52:16+00:00"
         },
         {
             "name": "monolyth/reroute",
-            "version": "4.2.3",
+            "version": "4.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/monolyth-php/reroute.git",
-                "reference": "064353716255dba088bdb02fbd52ecbd877960c3"
+                "reference": "ade67b334308020e7142d44911a649628ba85c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monolyth-php/reroute/zipball/064353716255dba088bdb02fbd52ecbd877960c3",
-                "reference": "064353716255dba088bdb02fbd52ecbd877960c3",
+                "url": "https://api.github.com/repos/monolyth-php/reroute/zipball/ade67b334308020e7142d44911a649628ba85c09",
+                "reference": "ade67b334308020e7142d44911a649628ba85c09",
                 "shasum": ""
             },
             "require": {
@@ -234,25 +170,25 @@
                 "php",
                 "router"
             ],
-            "time": "2018-03-02 13:29:58"
+            "time": "2018-04-27T13:12:08+00:00"
         },
         {
             "name": "monomelodies/kingconf",
-            "version": "1.1.1",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/monomelodies/kingconf.git",
-                "reference": "ddf504a7f5fa50adeb68eb7627a76fbbdd5b8b3a"
+                "reference": "30c85dabb840ec5229e93fb010e1493c0278c959"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monomelodies/kingconf/zipball/ddf504a7f5fa50adeb68eb7627a76fbbdd5b8b3a",
-                "reference": "ddf504a7f5fa50adeb68eb7627a76fbbdd5b8b3a",
+                "url": "https://api.github.com/repos/monomelodies/kingconf/zipball/30c85dabb840ec5229e93fb010e1493c0278c959",
+                "reference": "30c85dabb840ec5229e93fb010e1493c0278c959",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4",
-                "symfony/yaml": "*"
+                "php": ">=7.2",
+                "symfony/yaml": "^2.8.9"
             },
             "require-dev": {
                 "phpunit/phpunit": ">=4"
@@ -284,55 +220,7 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2018-02-01 18:46:24"
-        },
-        {
-            "name": "nesbot/carbon",
-            "version": "1.27.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ef81c39b67200dcd7401c24363dcac05ac3a4fe9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ef81c39b67200dcd7401c24363dcac05ac3a4fe9",
-                "reference": "ef81c39b67200dcd7401c24363dcac05ac3a4fe9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "symfony/translation": "~2.6 || ~3.0 || ~4.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2",
-                "phpunit/phpunit": "^4.8.35 || ^5.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Brian Nesbitt",
-                    "email": "brian@nesbot.com",
-                    "homepage": "http://nesbot.com"
-                }
-            ],
-            "description": "A simple API extension for DateTime.",
-            "homepage": "http://carbon.nesbot.com",
-            "keywords": [
-                "date",
-                "datetime",
-                "time"
-            ],
-            "time": "2018-04-23 09:02:57"
+            "time": "2018-07-18T07:30:47+00:00"
         },
         {
             "name": "psr/http-message",
@@ -382,28 +270,29 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "quibble/dabble",
-            "version": "1.7.4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/quibble-dbal/dabble.git",
-                "reference": "0c57a1ea0b8759eef8a0ea5efe3ee323254f5339"
+                "reference": "eebbf2b10648ade73d60fb1dca23cef58dd0964d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/quibble-dbal/dabble/zipball/0c57a1ea0b8759eef8a0ea5efe3ee323254f5339",
-                "reference": "0c57a1ea0b8759eef8a0ea5efe3ee323254f5339",
+                "url": "https://api.github.com/repos/quibble-dbal/dabble/zipball/eebbf2b10648ade73d60fb1dca23cef58dd0964d",
+                "reference": "eebbf2b10648ade73d60fb1dca23cef58dd0964d",
                 "shasum": ""
             },
             "require": {
-                "nesbot/carbon": "^1.21",
-                "php": ">=5.5"
+                "php": ">=7.2"
             },
             "require-dev": {
-                "gentry/gentry": "^0.10.2"
+                "gentry/gentry": "^0.13.0",
+                "gentry/toast": "^0.1.0",
+                "toast/unit": "^1.3"
             },
             "type": "library",
             "autoload": {
@@ -422,25 +311,25 @@
                 }
             ],
             "description": "DBAL for Quibble",
-            "time": "2017-05-02 15:25:45"
+            "time": "2018-07-19T11:03:16+00:00"
         },
         {
             "name": "quibble/postgresql",
-            "version": "1.7.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/quibble-dbal/postgresql.git",
-                "reference": "f6f22e14d501e3623d065a0c4e316298ea8167b4"
+                "reference": "25d091f8920c09a86bea9737cfa61002d0334860"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/quibble-dbal/postgresql/zipball/f6f22e14d501e3623d065a0c4e316298ea8167b4",
-                "reference": "f6f22e14d501e3623d065a0c4e316298ea8167b4",
+                "url": "https://api.github.com/repos/quibble-dbal/postgresql/zipball/25d091f8920c09a86bea9737cfa61002d0334860",
+                "reference": "25d091f8920c09a86bea9737cfa61002d0334860",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0",
-                "quibble/dabble": "^1.7.0"
+                "php": ">=7.2",
+                "quibble/dabble": "^2.0.0"
             },
             "type": "library",
             "autoload": {
@@ -459,30 +348,30 @@
                 }
             ],
             "description": "PostgreSQL-specific database abstraction layer",
-            "time": "2017-07-08 08:11:12"
+            "time": "2018-07-19T11:10:55+00:00"
         },
         {
             "name": "quibble/query",
-            "version": "0.7.3",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/quibble-dbal/query.git",
-                "reference": "59b5ffdbde4d9cf6175a00055e6bc6a27c36f8d0"
+                "reference": "d46ff2aba34be039ded1d1d962a744e5dfc6b3ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/quibble-dbal/query/zipball/59b5ffdbde4d9cf6175a00055e6bc6a27c36f8d0",
-                "reference": "59b5ffdbde4d9cf6175a00055e6bc6a27c36f8d0",
+                "url": "https://api.github.com/repos/quibble-dbal/query/zipball/d46ff2aba34be039ded1d1d962a744e5dfc6b3ae",
+                "reference": "d46ff2aba34be039ded1d1d962a744e5dfc6b3ae",
                 "shasum": ""
             },
             "require": {
-                "league/fractal": "^0.14.0",
-                "php": ">=7.0",
-                "quibble/dabble": "^1.7.2"
+                "php": ">=7.2",
+                "quibble/dabble": "^2.0.0"
             },
             "require-dev": {
-                "gentry/gentry": "^0.10.2",
-                "quibble/sqlite": "^1.6"
+                "gentry/gentry": "^0.13.0",
+                "quibble/sqlite": "^2.0.0",
+                "toast/unit": "^1.3"
             },
             "type": "library",
             "autoload": {
@@ -501,37 +390,34 @@
                 }
             ],
             "description": "Query builder for Quibble",
-            "time": "2018-02-07 09:28:11"
+            "time": "2018-07-19T11:20:45+00:00"
         },
         {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.7.0",
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "suggest": {
-                "ext-mbstring": "For best performance"
-            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
+                    "Symfony\\Polyfill\\Ctype\\": ""
                 },
                 "files": [
                     "bootstrap.php"
@@ -543,123 +429,46 @@
             ],
             "authors": [
                 {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
-            "description": "Symfony polyfill for the Mbstring extension",
+            "description": "Symfony polyfill for ctype functions",
             "homepage": "https://symfony.com",
             "keywords": [
                 "compatibility",
-                "mbstring",
+                "ctype",
                 "polyfill",
-                "portable",
-                "shim"
+                "portable"
             ],
-            "time": "2018-01-30 19:27:44"
-        },
-        {
-            "name": "symfony/translation",
-            "version": "v4.0.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/translation.git",
-                "reference": "e20a9b7f9f62cb33a11638b345c248e7d510c938"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/e20a9b7f9f62cb33a11638b345c248e7d510c938",
-                "reference": "e20a9b7f9f62cb33a11638b345c248e7d510c938",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/config": "<3.4",
-                "symfony/dependency-injection": "<3.4",
-                "symfony/yaml": "<3.4"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~3.4|~4.0",
-                "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/finder": "~2.8|~3.0|~4.0",
-                "symfony/intl": "~3.4|~4.0",
-                "symfony/yaml": "~3.4|~4.0"
-            },
-            "suggest": {
-                "psr/log": "To use logging capability in translator",
-                "symfony/config": "",
-                "symfony/yaml": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Translation\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Translation Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-02-22 10:50:29"
+            "time": "2018-04-30T19:57:29+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.0.8",
+            "version": "v2.8.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "8b34ebb5989df61cbd77eff29a02c4db9ac1069c"
+                "reference": "51356b7a2ff7c9fd06b2f1681cc463bb62b5c1ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/8b34ebb5989df61cbd77eff29a02c4db9ac1069c",
-                "reference": "8b34ebb5989df61cbd77eff29a02c4db9ac1069c",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/51356b7a2ff7c9fd06b2f1681cc463bb62b5c1ff",
+                "reference": "51356b7a2ff7c9fd06b2f1681cc463bb62b5c1ff",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
-            },
-            "conflict": {
-                "symfony/console": "<3.4"
-            },
-            "require-dev": {
-                "symfony/console": "~3.4|~4.0"
-            },
-            "suggest": {
-                "symfony/console": "For validating YAML files using the lint command"
+                "php": ">=5.3.9",
+                "symfony/polyfill-ctype": "~1.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
@@ -686,20 +495,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03 05:24:00"
+            "time": "2018-05-01T22:52:40+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.7.1",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "bf26aff803a11c5cc8eb7c4878a702c403ec67f1"
+                "reference": "63d920d1c9ebc009d860c3666593a66298727dd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/bf26aff803a11c5cc8eb7c4878a702c403ec67f1",
-                "reference": "bf26aff803a11c5cc8eb7c4878a702c403ec67f1",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/63d920d1c9ebc009d860c3666593a66298727dd6",
+                "reference": "63d920d1c9ebc009d860c3666593a66298727dd6",
                 "shasum": ""
             },
             "require": {
@@ -718,11 +527,22 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev",
-                    "dev-develop": "1.8.x-dev"
+                    "dev-master": "1.8.x-dev",
+                    "dev-develop": "1.9.x-dev",
+                    "dev-release-2.0": "2.0.x-dev"
                 }
             },
             "autoload": {
+                "files": [
+                    "src/functions/create_uploaded_file.php",
+                    "src/functions/marshal_headers_from_sapi.php",
+                    "src/functions/marshal_method_from_sapi.php",
+                    "src/functions/marshal_protocol_version_from_sapi.php",
+                    "src/functions/marshal_uri_from_sapi.php",
+                    "src/functions/normalize_server.php",
+                    "src/functions/normalize_uploaded_files.php",
+                    "src/functions/parse_cookie_header.php"
+                ],
                 "psr-4": {
                     "Zend\\Diactoros\\": "src/"
                 }
@@ -738,7 +558,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-02-26 15:44:50"
+            "time": "2018-07-09T21:17:27+00:00"
         }
     ],
     "packages-dev": [],
