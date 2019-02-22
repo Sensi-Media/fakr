@@ -14,7 +14,8 @@
         "monolyth/reroute": "^4.2",
         "quibble/postgresql": "^1.7",
         "quibble/query": "^0.7.3",
-        "monolyth/envy": "^0.5.3"
+        "monolyth/envy": "^0.5.3",
+        "swiftmailer/swiftmailer": "^6.1"
     },
     "autoload": {
         "psr-4": {
