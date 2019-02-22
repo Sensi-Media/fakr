@@ -7,7 +7,8 @@ use Monolyth\Envy\Environment;
 use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
-use Swift_Mime_SimpleMessage;
+use Swift_Message;
+use Swift_Message;
 use Toast\Cache\Item;
 use Toast\Cache\Pool;
 
@@ -40,7 +41,7 @@ if ($env->dev && !$env->test) {
 } elseif ($env->test) {
     class Mailer
     {
-        public function send(Swift_Mime_SimpleMessage $msg) : bool
+        public function send(Swift_Message $msg) : bool
         {
             $pool = Pool::getInstance();
             if (!(preg_match('/To: .*? <(.*?)>/m', "$msg", $to))) {
