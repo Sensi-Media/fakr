@@ -3,7 +3,7 @@
 namespace Sensi\Fakr;
 
 use Monolyth\Disclosure\Injector;
-use Swift_Mime_SimpleMessage;
+use Swift_Message;
 use DomainException;
 
 class Mailer
@@ -17,7 +17,7 @@ class Mailer
         $this->inject(function ($sensiAdapter) {});
     }
     
-    public function send(Swift_Mime_SimpleMessage $msg) : bool
+    public function send(Swift_Message $msg) : bool
     {
         $sender = $this->normalize($msg->getFrom());
         $recipient = $this->normalize($msg->getTo());
