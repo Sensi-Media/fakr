@@ -8,7 +8,6 @@ use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
 use Swift_Message;
-use Swift_Message;
 use Toast\Cache\Item;
 use Toast\Cache\Pool;
 
