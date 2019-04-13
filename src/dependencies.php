@@ -8,8 +8,7 @@ use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
 use Swift_Message;
-use Toast\Cache\Item;
-use Toast\Cache\Pool;
+use Toast\Cache\Cache;
 
 $container = new Container;
 $env = $container->get('env');
@@ -42,11 +41,11 @@ if ($env->dev && !$env->test) {
     {
         public function send(Swift_Message $msg) : bool
         {
-            $pool = Pool::getInstance();
+            $pool = Cache::getInstance(sys_get_temp_dir().'/fakr.cache');
             if (!(preg_match('/To: .*? <(.*?)>/m', "$msg", $to))) {
                 preg_match('/To: (.*?)$/m', "$msg", $to);
             }
-            $pool->save(new Item($to[1], $msg));
+            $pool->set($to[1], $msg);
             return true;
         }
     }
