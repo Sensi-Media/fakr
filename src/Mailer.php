@@ -24,7 +24,7 @@ class Mailer
     
     public function send(Swift_Message $msg) : bool
     {
-        $msg->setTo($this->env->mail);
+        $msg->setTo($this->env->email);
         return parent::send($msg);
     }
 }
