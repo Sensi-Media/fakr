@@ -8,31 +8,14 @@ use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
 use Swift_Message;
+use Swift_SmtpTransport;
+use Swift_Mailer;
 use Toast\Cache\Cache;
 
 $container = new Container;
 $env = $container->get('env');
 
 if ($env->dev && !$env->test) {
-    $container->register(function (&$fakrRepository) {
-        $fakrRepository = new Repository;
-    });
-    $container->register(function (&$sensiAdapter) {
-        $env = new Environment(dirname(__DIR__).'/Envy.json', function ($env) {
-            return ['fakr'];
-        });
-        $sensiAdapter = new class(
-            'host=jerom;dbname='.$env->db['name'],
-            $env->db['user'],
-            $env->db['pass'],
-            [
-                PDO::ATTR_PERSISTENT => true,
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            ]
-        ) extends Adapter {
-            use Buildable;
-        };
-    });
     $container->register(function (&$mailer) {
         $mailer = new Mailer;
     });
@@ -52,5 +35,8 @@ if ($env->dev && !$env->test) {
     $container->register(function (&$mailer) {
         $mailer = new Mailer;
     });
+} else {
+    $transport = new Swift_SmtpTransport('localhost', 25);
+    $mailer = new Swift_Mailer($transport);
 }
 
