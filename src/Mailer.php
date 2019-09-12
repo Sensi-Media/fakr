@@ -22,7 +22,7 @@ class Mailer extends Swift_Mailer
         $this->inject(function ($env) {});
     }
     
-    public function send(Swift_Mime_SimpleMessage $msg, &$failedRecipients = null)
+    public function send(Swift_Mime_SimpleMessage $msg, &$failedRecipients = null) : bool
     {
         $msg->setTo($this->env->email);
         return parent::send($msg);
