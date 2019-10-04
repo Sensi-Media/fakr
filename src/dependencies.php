@@ -36,7 +36,9 @@ if ($env->dev && !$env->test) {
         $mailer = new Mailer;
     });
 } else {
-    $transport = new Swift_SmtpTransport('localhost', 25);
-    $mailer = new Swift_Mailer($transport);
+    $container->register(function (&$mailer) {
+        $transport = new Swift_SmtpTransport('localhost', 25);
+        $mailer = new Swift_Mailer($transport);
+    });
 }
 
