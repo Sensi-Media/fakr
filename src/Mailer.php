@@ -8,7 +8,7 @@ use Swift_Mailer;
 use Swift_SmtpTransport;
 use DomainException;
 
-class Mailer
+class Mailer extends Swift_Mailer
 {
     use Injector;
 
