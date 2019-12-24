@@ -1,8 +1,8 @@
 {
-    "name": "sensi/fakr",
+    "name": "sensimedia/fakr",
     "description": "Mail faker for Sensi",
     "type": "library",
-    "license": "none",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Marijn Ophorst",
