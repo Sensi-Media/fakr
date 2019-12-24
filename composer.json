@@ -15,7 +15,8 @@
         "quibble/postgresql": "^2.0",
         "quibble/query": "^1.1",
         "monolyth/envy": "^0.6.0",
-        "swiftmailer/swiftmailer": "^6.1"
+        "swiftmailer/swiftmailer": "^6.1",
+        "monolyth/disclosure": "^2.1"
     },
     "autoload": {
         "psr-4": {
