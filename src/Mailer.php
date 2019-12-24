@@ -3,7 +3,7 @@
 namespace Sensi\Fakr;
 
 use Monolyth\Disclosure\Injector;
-use Swift_Message;
+use Swift_Mime_SimpleMessage;
 use Swift_Mailer;
 use Swift_SmtpTransport;
 use DomainException;
@@ -22,9 +22,9 @@ class Mailer extends Swift_Mailer
         $this->inject(function ($env) {});
     }
     
-    public function send(Swift_Message $msg, &$failedRecipients = null) : bool
+    public function send(Swift_Mime_SimpleMessage $msg, &$failedRecipients = null) : bool
     {
-        $msg->setTo($this->env->mail);
+        $msg->setTo($this->env->email);
         return parent::send($msg);
     }
 }
