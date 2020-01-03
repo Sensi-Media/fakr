@@ -10,7 +10,6 @@
         }
     ],
     "require": {
-        "zendframework/zend-diactoros": "^1.7",
         "monolyth/reroute": "^5.0",
         "quibble/postgresql": "^2.0",
         "quibble/query": "^1.1",
