@@ -15,9 +15,8 @@ class Mailer extends Swift_Mailer
     /** @var Monolyth\Envy\Environment */
     private $env;
     
-    public function __construct()
+    public function __construct(Swift_SmtpTransport $transport)
     {
-        $transport = new Swift_SmtpTransport('localhost', 25);
         parent::__construct($transport);
         $this->inject(function ($env) {});
     }
