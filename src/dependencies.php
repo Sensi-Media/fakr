@@ -7,22 +7,22 @@ use Monolyth\Envy\Environment;
 use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
-use Swift_Message;
-use Swift_SmtpTransport;
+use Swift_Mime_SimpleMessage;
 use Swift_Mailer;
 use Toast\Cache\Cache;
 
 $container = new Container;
 $env = $container->get('env');
+$transport = $container->get('transport');
 
 if ($env->dev && !$env->test) {
-    $container->register(function (&$mailer) {
-        $mailer = new Mailer;
+    $container->register(function (&$mailer) use ($transport) {
+        $mailer = new Mailer($transport);
     });
 } elseif ($env->test) {
-    class Mailer
+    class Mailer extends Swift_Mailer
     {
-        public function send(Swift_Message $msg) : bool
+        public function send(Swift_Mime_SimpleMessage $msg, &$failedRecipients = null) : bool
         {
             $pool = Cache::getInstance(sys_get_temp_dir().'/fakr.cache');
             if (!(preg_match('/To: .*? <(.*?)>/m', "$msg", $to))) {
@@ -32,12 +32,11 @@ if ($env->dev && !$env->test) {
             return true;
         }
     }
-    $container->register(function (&$mailer) {
-        $mailer = new Mailer;
+    $container->register(function (&$mailer) use ($transport) {
+        $mailer = new Mailer($transport);
     });
 } else {
-    $container->register(function (&$mailer) {
-        $transport = new Swift_SmtpTransport('localhost', 25);
+    $container->register(function (&$mailer) use ($transport) {
         $mailer = new Swift_Mailer($transport);
     });
 }
