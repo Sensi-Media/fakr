@@ -20,9 +20,6 @@ if ($env->dev && !$env->test) {
         $mailer = new Mailer($transport);
     });
 } elseif ($env->test) {
-    class Mailer extends Swift_Mailer
-    {
-    }
     $container->register(function (&$mailer) use ($transport) {
         $mailer = new class($transport) extends BaseMailer {
             public function send(Email $msg, &$failedRecipients = null) : bool
