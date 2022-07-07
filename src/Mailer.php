@@ -3,27 +3,26 @@
 namespace Sensi\Fakr;
 
 use Monolyth\Disclosure\Injector;
-use Swift_Mime_SimpleMessage;
-use Swift_Mailer;
-use Swift_SmtpTransport;
+use Symfony\Component\Mailer\{ Mailer as BaseMailer, Transport };
+use Symfony\Component\Mime\Email;
 use DomainException;
+use Monolyth\Envy\Environment;
 
-class Mailer extends Swift_Mailer
+class Mailer extends BaseMailer
 {
     use Injector;
 
-    /** @var Monolyth\Envy\Environment */
-    private $env;
+    private Environment $env;
     
-    public function __construct(Swift_SmtpTransport $transport)
+    public function __construct(Transport $transport)
     {
         parent::__construct($transport);
         $this->inject(function ($env) {});
     }
     
-    public function send(Swift_Mime_SimpleMessage $msg, &$failedRecipients = null) : bool
+    public function send(Email $msg, &$failedRecipients = null) : bool
     {
-        $msg->setTo($this->env->email);
+        $msg->to($this->env->email);
         return parent::send($msg);
     }
 }
