@@ -8,7 +8,7 @@ use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
 use Symfony\Component\Mime\Email;
-use Symfony\Component\Mailer\Mailer as BaseMailer;
+use Symfony\Component\Mailer\{ Mailer as BaseMailer, MailerInterface };
 use Toast\Cache\Cache;
 
 $container = new Container;
@@ -21,7 +21,7 @@ if ($env->dev && !$env->test) {
     });
 } elseif ($env->test) {
     $container->register(function (&$mailer) use ($transport) {
-        $mailer = new class($transport) extends BaseMailer {
+        $mailer = new class($transport) implements MailerInterface {
             public function send(Email $msg, &$failedRecipients = null) : bool
             {
                 $pool = Cache::getInstance(sys_get_temp_dir().'/fakr.cache');
