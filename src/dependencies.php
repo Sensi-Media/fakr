@@ -7,8 +7,8 @@ use Monolyth\Envy\Environment;
 use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
-use Swift_Mime_SimpleMessage;
-use Swift_Mailer;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\Mailer as BaseMailer;
 use Toast\Cache\Cache;
 
 $container = new Container;
@@ -22,22 +22,23 @@ if ($env->dev && !$env->test) {
 } elseif ($env->test) {
     class Mailer extends Swift_Mailer
     {
-        public function send(Swift_Mime_SimpleMessage $msg, &$failedRecipients = null) : bool
-        {
-            $pool = Cache::getInstance(sys_get_temp_dir().'/fakr.cache');
-            if (!(preg_match('/To: .*? <(.*?)>/m', "$msg", $to))) {
-                preg_match('/To: (.*?)$/m', "$msg", $to);
-            }
-            $pool->set($to[1], $msg);
-            return true;
-        }
     }
     $container->register(function (&$mailer) use ($transport) {
-        $mailer = new Mailer($transport);
+        $mailer = new class($transport) extends BaseMailer {
+            public function send(Email $msg, &$failedRecipients = null) : bool
+            {
+                $pool = Cache::getInstance(sys_get_temp_dir().'/fakr.cache');
+                if (!(preg_match('/To: .*? <(.*?)>/m', "$msg", $to))) {
+                    preg_match('/To: (.*?)$/m', "$msg", $to);
+                }
+                $pool->set($to[1], $msg);
+                return true;
+            }
+        };
     });
 } else {
     $container->register(function (&$mailer) use ($transport) {
-        $mailer = new Swift_Mailer($transport);
+        $mailer = new BaseMailer($transport);
     });
 }
 
