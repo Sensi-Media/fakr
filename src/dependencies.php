@@ -7,8 +7,8 @@ use Monolyth\Envy\Environment;
 use Quibble\Postgresql\Adapter;
 use Quibble\Query\Buildable;
 use PDO;
-use Symfony\Component\Mime\Email;
-use Symfony\Component\Mailer\{ Mailer as BaseMailer, MailerInterface };
+use Symfony\Component\Mime\RawMessage;
+use Symfony\Component\Mailer\{ Mailer as BaseMailer, MailerInterface, Envelope };
 use Toast\Cache\Cache;
 
 $container = new Container;
@@ -22,14 +22,13 @@ if ($env->dev && !$env->test) {
 } elseif ($env->test) {
     $container->register(function (&$mailer) use ($transport) {
         $mailer = new class($transport) implements MailerInterface {
-            public function send(Email $msg, &$failedRecipients = null) : bool
+            public function send(RawMessage $msg, ?Envelope $envelope = null) : void
             {
                 $pool = Cache::getInstance(sys_get_temp_dir().'/fakr.cache');
-                if (!(preg_match('/To: .*? <(.*?)>/m', "$msg", $to))) {
-                    preg_match('/To: (.*?)$/m', "$msg", $to);
+                if (!(preg_match('/To: .*? <(.*?)>/m', $msg->toString(), $to))) {
+                    preg_match('/To: (.*?)$/m', $msg->toString(), $to);
                 }
                 $pool->set($to[1], $msg);
-                return true;
             }
         };
     });
