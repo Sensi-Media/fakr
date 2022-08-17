@@ -3,12 +3,12 @@
 namespace Sensi\Fakr;
 
 use Monolyth\Disclosure\Injector;
-use Symfony\Component\Mailer\{ Mailer as BaseMailer, Transport };
+use Symfony\Component\Mailer\{ MailerInterface, Transport };
 use Symfony\Component\Mime\Email;
 use DomainException;
 use Monolyth\Envy\Environment;
 
-class Mailer extends BaseMailer
+class Mailer implements MailerInterface
 {
     use Injector;
 
