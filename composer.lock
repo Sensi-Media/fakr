@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04f69ffce9ed7457186afd005259aec5",
+    "content-hash": "30ce99521a48e0ec84f0b46f4818257f",
     "packages": [
         {
             "name": "doctrine/lexer",
@@ -798,31 +798,31 @@
             "time": "2021-07-14T16:46:02+00:00"
         },
         {
-            "name": "quibble/dabble",
-            "version": "2.2.1",
+            "name": "psr/simple-cache",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/quibble-dbal/dabble.git",
-                "reference": "e1522718c8650859bc4f692f3b0a4f25b700ea71"
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/quibble-dbal/dabble/zipball/e1522718c8650859bc4f692f3b0a4f25b700ea71",
-                "reference": "e1522718c8650859bc4f692f3b0a4f25b700ea71",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "gentry/gentry": "^0.13.0",
-                "gentry/toast": "^0.1.0",
-                "toast/unit": "^1.3"
+                "php": ">=5.3.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "Quibble\\Dabble\\": "./src"
+                    "Psr\\SimpleCache\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -831,103 +831,22 @@
             ],
             "authors": [
                 {
-                    "name": "Marijn Ophorst",
-                    "email": "marijn@monomelodies.nl"
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
-            "description": "DBAL for Quibble",
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
             "support": {
-                "issues": "https://github.com/quibble-dbal/dabble/issues",
-                "source": "https://github.com/quibble-dbal/dabble/tree/2.2.1"
+                "source": "https://github.com/php-fig/simple-cache/tree/master"
             },
-            "time": "2022-03-09T14:44:34+00:00"
-        },
-        {
-            "name": "quibble/postgresql",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/quibble-dbal/postgresql.git",
-                "reference": "ca2f33c3e09fc99aac20bc93a08d92fbf5d376ca"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/quibble-dbal/postgresql/zipball/ca2f33c3e09fc99aac20bc93a08d92fbf5d376ca",
-                "reference": "ca2f33c3e09fc99aac20bc93a08d92fbf5d376ca",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "quibble/dabble": "^2.0.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Quibble\\Postgresql\\": "./src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marijn Ophorst",
-                    "email": "marijn@monomelodies.nl"
-                }
-            ],
-            "description": "PostgreSQL-specific database abstraction layer",
-            "support": {
-                "issues": "https://github.com/quibble-dbal/postgresql/issues",
-                "source": "https://github.com/quibble-dbal/postgresql/tree/master"
-            },
-            "time": "2018-07-25T07:11:00+00:00"
-        },
-        {
-            "name": "quibble/query",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/quibble-dbal/query.git",
-                "reference": "bce2cf094208e17cd21e28d391e5fe925cd2b655"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/quibble-dbal/query/zipball/bce2cf094208e17cd21e28d391e5fe925cd2b655",
-                "reference": "bce2cf094208e17cd21e28d391e5fe925cd2b655",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "quibble/dabble": "^2.0.1"
-            },
-            "require-dev": {
-                "gentry/gentry": "^0.13.0",
-                "quibble/sqlite": "^2.0.0",
-                "toast/unit": "^1.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Quibble\\Query\\": "./src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marijn Ophorst",
-                    "email": "marijn@monomelodies.nl"
-                }
-            ],
-            "description": "Query builder for Quibble",
-            "support": {
-                "issues": "https://github.com/quibble-dbal/query/issues",
-                "source": "https://github.com/quibble-dbal/query/tree/master"
-            },
-            "time": "2019-10-05T16:46:30+00:00"
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "simoneast/simple-ansi-colors",
@@ -1930,6 +1849,51 @@
             "time": "2022-06-27T13:16:42+00:00"
         },
         {
+            "name": "toast/cache",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/toast-php/cache.git",
+                "reference": "421d5ae79a810a1327fe75d84c337d8c89d58034"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/toast-php/cache/zipball/421d5ae79a810a1327fe75d84c337d8c89d58034",
+                "reference": "421d5ae79a810a1327fe75d84c337d8c89d58034",
+                "shasum": ""
+            },
+            "require": {
+                "psr/simple-cache": "^1.0",
+                "toast/unit": "^2.0.0"
+            },
+            "require-dev": {
+                "gentry/gentry": "^0.13.4",
+                "gentry/toast": "^0.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Toast\\Cache\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Toast PSR-6-compatible cache module",
+            "support": {
+                "issues": "https://github.com/toast-php/cache/issues",
+                "source": "https://github.com/toast-php/cache/tree/master"
+            },
+            "time": "2019-11-07T13:55:48+00:00"
+        },
+        {
             "name": "toast/unit",
             "version": "2.2.1",
             "source": {
@@ -2081,5 +2045,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
