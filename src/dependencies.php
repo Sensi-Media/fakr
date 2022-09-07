@@ -4,8 +4,6 @@ namespace Sensi\Fakr;
 
 use Monolyth\Disclosure\Container;
 use Monolyth\Envy\Environment;
-use Quibble\Postgresql\Adapter;
-use Quibble\Query\Buildable;
 use PDO;
 use Symfony\Component\Mime\RawMessage;
 use Symfony\Component\Mailer\{ Mailer as BaseMailer, MailerInterface, Envelope };
