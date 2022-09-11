@@ -12,7 +12,7 @@
     "require": {
         "monolyth/reroute": "^5.0",
         "monolyth/envy": "^0.7.0",
-        "monolyth/disclosure": "^2.1",
+        "monolyth/disclosure": "^3.0",
         "symfony/mailer": "^6.1",
         "toast/cache": "^0.4.0"
     },
